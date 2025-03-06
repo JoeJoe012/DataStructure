@@ -47,7 +47,7 @@ bool grow(ArrayList list) {
     return true;
 }
 /**
- * 将指定元素插入到此列表中的指定位置
+ * 将指定元素插入到此顺序表中的指定位置
  * @param list 操作的顺序表
  * @param element 待插入的元素
  * @param index 插入的位置, index的位序从1开始
@@ -66,7 +66,7 @@ bool insertList(ArrayList list, E element, int index) {
     return true;
 }
 /**
- * 删除此列表中指定位置的元素
+ * 删除此顺序表中指定位置的元素
  * @param list 操作的顺序表
  * @param index 插入的位置, index的位序从1开始
  * @return 删除成功返回true, 否则返回false
