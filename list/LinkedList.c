@@ -11,7 +11,7 @@ struct ListNode {
 void init(Node head) {head->next = NULL;}
 /**
  * 将指定元素插入到此链表中的指定位置
- *     单链表中的结点都有一个指向后继结点的指针, 因此插入操作的关键是找到指定位置的前驱结点(也就是上一个结点)
+ *   ·单链表中的结点都有一个指向后继结点的指针, 因此插入操作的关键是找到指定位置的前驱结点(也就是上一个结点)
  * @param head 操作链表的头结点
  * @param element 待插入的元素
  * @param index 插入的位置, index的位序从1开始
@@ -33,7 +33,7 @@ bool insertList(Node head, E element, int index) {
 }
 /**
  * 删除此链表中指定位置的元素
- *     单链表删除操作的关键是找到目标位置的前驱结点
+ *   ·单链表删除操作的关键是找到目标位置的前驱结点
  * @param head 操作链表的头结点
  * @param index 删除的位置, index的位序从1开始
  * @return 若删除成功返回true, 否则返回false
