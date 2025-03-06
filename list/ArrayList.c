@@ -6,14 +6,14 @@ typedef int E;
 /*顺序表(Sequence List)*/
 typedef struct List * ArrayList;
 struct List {
-    E * array; //指向顺序表的底层数组
-    int capacity; //数组的容量
-    int size; //顺序表中的元素数量
+    E * array;  //指向顺序表的底层数组
+    int capacity;  //数组的容量
+    int size;  //顺序表中的元素数量
 };
 /**
  * 检查插入的范围: 
- *     数组中元素的索引范围为[0,size-1], 可在最后面插入元素，因此数组中插入元素的范围为[0,size]
- *     顺序表位序从1开始, 因此顺序表中插入元素的范围为[1,size+1]
+ *   ·数组中元素的索引范围为[0,size-1], 可在最后面插入元素，因此数组中插入元素的范围为[0,size]
+ *   ·序表位序从1开始, 因此顺序表中插入元素的范围为[1,size+1]
  * @return index在插入的范围内返回true，否则返回false
  */
 bool rangeCheckForInsert(int index, int size) {
@@ -23,8 +23,8 @@ bool rangeCheckForInsert(int index, int size) {
 }
 /**
  * 检查元素索引的范围:
- *     数据中元素的索引访问为[0,size-1]
- *     顺序表位序从1开始, 因此顺序表中元素的索引范围为[1,size]
+ *   ·数据中元素的索引访问为[0,size-1]
+ *   ·顺序表位序从1开始, 因此顺序表中元素的索引范围为[1,size]
  */
 bool checkIndex(int index, int size) {
     if (index < 1 || index > size)
