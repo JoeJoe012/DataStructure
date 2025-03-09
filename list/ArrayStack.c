@@ -3,7 +3,7 @@
 #include <stdbool.h>
 static const int DEFAULT_CAPACITY = 10;
 typedef int E;
-/*顺序栈(Sequence Stack)*/
+/*顺序栈(Sequence Stack) - 先进后出结构*/
 typedef struct Stack * ArrayStack;
 struct Stack {
     E * array;
@@ -25,6 +25,12 @@ bool grow(ArrayStack stack) {
     stack->capacity = newCapacity;
     return true;
 }
+/** 
+ * 将一个元素推到栈里
+ * @param stack 数组实现的顺序栈
+ * @param element 待插入的元素
+ * @return 元素推入成功返回true, 否则返回false
+ */
 bool pushStack(ArrayStack stack, E element) {
     if ((stack->top == stack->capacity - 1) && !grow(stack)) return false;
     stack->array[stack->top + 1] = element;
@@ -34,6 +40,11 @@ bool pushStack(ArrayStack stack, E element) {
 bool isEmpty(ArrayStack stack) {
     return stack->top == -1;
 }
+/**
+ * 删除此栈顶部的元素
+ * @param stack 数组实现的顺序栈
+ * @return 返回删除的栈顶元素
+ */
 E popStack(ArrayStack stack) {
     return stack->array[stack->top--];
 }
